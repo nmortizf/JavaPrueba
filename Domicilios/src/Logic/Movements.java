@@ -32,16 +32,16 @@ public class Movements {
 		case 'I':
 			switch(localDirection) {
 			case 'N':
-				point.setDirection('E');
-				break;
-			case 'S':
 				point.setDirection('O');
 				break;
+			case 'S':
+				point.setDirection('E');
+				break;
 			case 'E':
-				point.setDirection('S');
+				point.setDirection('N');
 				break;
 			case 'O':
-				point.setDirection('N');
+				point.setDirection('S');
 				break;
 			default:
 				break;
