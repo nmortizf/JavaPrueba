@@ -5,10 +5,8 @@ import java.util.*;
 public class Test {
 
 	public static void main(String [] args) {
-		List<String> list = new ArrayList<>();
-		list.add("AAAAIAA");
-		list.add("DDDDAIA");
-		list.add("AADADAI");
+		FileManager fileManager = new FileManager();
+		List<String> list = fileManager.readFile();
 		char [] letter;		
 		Point p1 = new Point(0,0,'N');
 		Movements m1 = new Movements();
