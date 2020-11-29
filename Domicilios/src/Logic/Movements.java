@@ -8,8 +8,10 @@ public class Movements {
 	private char localDirection;
 	private int position_x;
 	private int position_y;
-	private List<String> list;
+	private List<String> inlist;
+	private List<String> outList;
 	private char [] letters;
+	private String prueba;
 	
 	public Point changeDirection(Point p, char command) {
 		this.point = p;
@@ -85,12 +87,13 @@ public class Movements {
 		return point;
 	}
 	
-	public void chooseAction(Point p, char [] letter, List<String> list) {
+	public List<String> chooseAction(Point p, char [] letter, List<String> list) {
 		this.point = p;
 		this.letters = letter;
-		this.list = list;
-		for(int i = 0; i < list.size(); i++) {
-			letters = list.get(i).toCharArray();
+		this.inlist = list;
+		outList = new ArrayList<>();
+		for(int i = 0; i < inlist.size(); i++) {
+			letters = inlist.get(i).toCharArray();
 			System.out.println();
 			for(char a : letters) {
 				if(a != 'A') {
@@ -98,11 +101,13 @@ public class Movements {
 				}
 				else {
 					makeMovement(point, a);
-				}
-				System.out.println("El punto " +  i + "  ahora es " + point);
-			}		
+				}				
+				prueba = "El Dron " +  (i+1) + "  esta en el punto con " + point;
+			}
+			outList.add(prueba);
 		}
 		System.out.println();
+		return outList;
 	}
 	
 }
