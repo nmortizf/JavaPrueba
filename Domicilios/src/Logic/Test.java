@@ -25,8 +25,7 @@ public class Test {
 				}
 				System.out.println("El punto " +  i + "  ahora es " + p1);
 			}
-		}
-		System.out.println();
+		}		
 		System.out.println("El punto final es " + p1);		
 		}		
 }
