@@ -1,11 +1,15 @@
 package Logic;
 
+import java.util.*;
+
 public class Movements {
 	
 	private Point point;
 	private char localDirection;
 	private int position_x;
 	private int position_y;
+	private List<String> list;
+	private char [] letters;
 	
 	public Point changeDirection(Point p, char command) {
 		this.point = p;
@@ -81,6 +85,24 @@ public class Movements {
 		return point;
 	}
 	
+	public void chooseAction(Point p, char [] letter, List<String> list) {
+		this.point = p;
+		this.letters = letter;
+		this.list = list;
+		for(int i = 0; i < list.size(); i++) {
+			letters = list.get(i).toCharArray();
+			System.out.println();
+			for(char a : letters) {
+				if(a != 'A') {
+					changeDirection(point, a);
+				}
+				else {
+					makeMovement(point, a);
+				}
+				System.out.println("El punto " +  i + "  ahora es " + point);
+			}		
+		}
+		System.out.println();
+	}
 	
-
 }
