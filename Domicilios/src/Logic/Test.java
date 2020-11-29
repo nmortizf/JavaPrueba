@@ -3,7 +3,7 @@ package Logic;
 public class Test {
 
 	public static void main(String [] args) {
-		String commands = "AAAAIAA";
+		String commands = "AAAAIA";
 		char [] letter = commands.toCharArray();
 		Point p1 = new Point(0,0,'N');
 		Movements m1 = new Movements();
