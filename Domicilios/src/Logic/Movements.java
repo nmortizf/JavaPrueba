@@ -92,6 +92,7 @@ public class Movements {
 		this.letters = letter;
 		this.inlist = list;
 		outList = new ArrayList<>();
+		outList.add("El punto inicial esta en el punto con " + point.toString());
 		for(int i = 0; i < inlist.size(); i++) {
 			letters = inlist.get(i).toCharArray();
 			System.out.println();
