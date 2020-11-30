@@ -103,7 +103,7 @@ public class Movements {
 				else {
 					makeMovement(point, a);
 				}				
-				prueba = "El Dron " +  (i+1) + "  esta en el punto con " + point;
+				prueba = "El Paquete " +  (i+1) + "  esta en el punto con " + point;
 			}
 			outList.add(prueba);
 		}
