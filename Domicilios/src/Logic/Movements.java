@@ -11,7 +11,7 @@ public class Movements {
 	private List<String> inlist;
 	private List<String> outList;
 	private char [] letters;
-	private String prueba;
+	private String message;
 	
 	public Point changeDirection(Point p, char command) {
 		this.point = p;
@@ -103,9 +103,9 @@ public class Movements {
 				else {
 					makeMovement(point, a);
 				}				
-				prueba = "El Paquete " +  (i+1) + "  esta en el punto con " + point;
+				message = "El Paquete " +  (i+1) + "  esta en el punto con " + point;
 			}
-			outList.add(prueba);
+			outList.add(message);
 		}
 		System.out.println();
 		return outList;
